@@ -542,6 +542,65 @@ entries:
           url: https://github.com/prometheus-operator/kube-prometheus
       artifacthub.io/operator: "true"
     apiVersion: v2
+    appVersion: 0.56.3
+    created: "2022-06-01T00:18:44.950857435Z"
+    dependencies:
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 4.7.*
+    - condition: nodeExporter.enabled
+      name: prometheus-node-exporter
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 3.1.*
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.29.*
+    description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards,
+      and Prometheus rules combined with documentation and scripts to provide easy
+      to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
+      Prometheus Operator.
+    digest: f64e8161c514ba5a7d0dcd7c18e9c690f0d5bcdc8d642b7a85e2e7f05137b873
+    home: https://github.com/prometheus-operator/kube-prometheus
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - operator
+    - prometheus
+    - kube-prometheus
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andrew@quadcorps.co.uk
+      name: andrewgkew
+    - name: bismarck
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    - email: kube-prometheus-stack@sisti.pt
+      name: GMartinez-Sisti
+    - email: scott@r6by.com
+      name: scottrigby
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    name: kube-prometheus-stack
+    sources:
+    - https://github.com/prometheus-community/helm-charts
+    - https://github.com/prometheus-operator/kube-prometheus
+    type: application
+    urls:
+    - https://github.com/rasta-rocket/prometheus-helm-charts/releases/download/kube-prometheus-stack-35.5.0/kube-prometheus-stack-35.5.0.tgz
+    version: 35.5.0
+  - annotations:
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+        - name: Upstream Project
+          url: https://github.com/prometheus-operator/kube-prometheus
+      artifacthub.io/operator: "true"
+    apiVersion: v2
     appVersion: 0.54.1
     created: "2022-02-25T16:01:44.616642904Z"
     dependencies:
@@ -27564,6 +27623,23 @@ entries:
     version: 1.0.0
   prometheus-mysql-exporter:
   - apiVersion: v1
+    appVersion: v0.14.0
+    created: "2022-06-01T00:18:45.055609405Z"
+    description: A Helm chart for prometheus mysql exporter with cloudsqlproxy
+    digest: f66419b46cfa128011d74864c9791c6bd855a909e6b87f3af1dd68489e6fe021
+    home: https://github.com/prometheus/mysqld_exporter
+    maintainers:
+    - email: juan.chimienti@gmail.com
+      name: juanchimienti
+    - email: monotek23@gmail.com
+      name: monotek
+    name: prometheus-mysql-exporter
+    sources:
+    - https://github.com/prometheus/mysqld_exporter
+    urls:
+    - https://github.com/rasta-rocket/prometheus-helm-charts/releases/download/prometheus-mysql-exporter-1.8.0/prometheus-mysql-exporter-1.8.0.tgz
+    version: 1.8.0
+  - apiVersion: v1
     appVersion: v0.12.1
     created: "2022-02-25T16:01:45.41584158Z"
     description: A Helm chart for prometheus mysql exporter with cloudsqlproxy
@@ -44200,4 +44276,4 @@ entries:
     urls:
     - https://prometheus-community.github.io/helm-charts/prometheus-to-sd-0.1.0.tgz
     version: 0.1.0
-generated: "2022-02-25T16:01:46.41147131Z"
+generated: "2022-06-01T00:18:45.070678244Z"
